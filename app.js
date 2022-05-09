@@ -11,14 +11,14 @@ const tasks = require('./routes/tasks')
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 // routes--------------
-app.get('/hello',(req,res) =>{
-    res.send("Task Manager App")
-})
+// app.get('/hello',(req,res) =>{
+//     res.send("Task Manager App")
+// })
 
 app.use('/api/v1/task',tasks)
 
 
-const port = 4000
+const port = 9000
 mongoose
   .connect(
     `mongodb+srv://rubi:rubi@cluster0.264g2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
